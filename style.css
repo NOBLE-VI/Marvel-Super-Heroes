@@ -1,0 +1,454 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(121, 157, 255), rgb(151, 25, 253) ,rgb(253, 101, 101));
+}
+
+h1{
+    font-size: 30px;
+    color: cadetblue;
+    text-align: center;
+}
+
+#nav-bar{
+    width: auto;
+    height: 50px;
+    background-color: rgb(34, 34, 34);
+
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 50px;
+
+    border-bottom: 2px solid rgb(141, 117, 117);
+}
+
+#nav-links{
+    display: flex;
+    margin: auto;
+    width: 600px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: larger;
+    
+    background-color: rgb(77, 77, 77);
+    padding: 0px 8px;
+    border-radius: 3px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#nav-links>p{
+    display: inline-block;
+    justify-content: space-between;
+    margin-top: -2px;
+    /* margin-left: 200px; */
+    transition: all 500ms ease-in-out;
+    
+}
+
+#nav-links>p:hover{
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    /* margin-left: 200px; */
+    
+}
+
+#nav-links>p a{
+    color: azure;
+    text-decoration: none;
+    /* margin-left: 200px; */
+    
+}
+
+#search-bar{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    align-self: center;
+    margin-right: 10px;
+}
+
+#search-bar input{
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    padding-left: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(77, 77, 77);
+    color: aliceblue;
+}
+
+#title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:rgb(255, 255, 255);
+    margin-left: 180px;
+    font-size: xxx-large;
+}
+
+
+#heroes-list{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    width: 80%;
+    height: auto;
+    box-shadow: 0px 2px 2px 1px grey;
+    border-radius: 10px;
+
+    margin:auto;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+#heroes-list > li{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 80px;
+    /* border: 2px solid red; */
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(63, 63, 63);
+    padding: 5px;
+    margin-top: 10px;
+    list-style: none;
+    align-items: center;
+    /* text-justify: auto; */
+    
+}
+
+.hero-link{
+    text-decoration: none;
+    color: azure;
+    transition: all .2s ease-in-out;
+}
+
+.hero-link:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+#heroes-list > li p{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 100%;
+    border-bottom: 5px solid transparent;
+    margin-left: 10px;
+    transition: all 0.1s ease-in-out;
+    transition: border .5s ease-in-out;
+}
+
+#heroes-list > li p:hover{
+    display: inline-block;
+    border-bottom: 3px solid rgb(223, 223, 223);
+    color:grey;
+    font-weight: 500;
+    font-size: 110%;
+    padding-right: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.hero-thumbnail{
+    border-radius: 0px 10px 10px 0px;
+    width: 100px;
+    height: 100%;
+}
+
+#like{
+   margin-left: auto;
+   margin-right: 10px;
+   color: grey;
+}
+
+#like:hover{
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+ }
+
+ #fav-heroes-list{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    width: 80%;
+    height: auto;
+    box-shadow: 0px 2px 2px 1px grey;
+    border-radius: 10px;
+
+    margin:auto;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+#fav-heroes-list > li{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 80px;
+    /* border: 2px solid red; */
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(63, 63, 63);
+    padding: 5px;
+    margin-top: 10px;
+    list-style: none;
+    align-items: center;
+    /* text-justify: auto; */
+    
+}
+
+#fav-heroes-list > li p{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 100%;
+    margin-left: 10px;
+    border-bottom: 3px solid transparent;
+    transition: all .2s ease-in-out;
+    transition: border 1 ease-in-out;
+}
+
+#fav-heroes-list > li p:hover{
+    display: inline-block;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 110%;
+    padding-right: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+#fl-1{
+    font-size: xxx-large;
+    color: rgb(255, 255, 255);
+    text-decoration: underline solid black;
+    transition: all 0.5s ease-in-out;
+}
+
+#fl-1:hover{
+    font-size: 60px;
+    color: rgb(144, 34, 218);
+    text-decoration: underline solid black;
+}
+
+
+#fl-2{
+    font-size: xxx-large;
+    color: rgb(255, 255, 255);
+    text-decoration: underline solid black;
+    transition: all 0.5s ease-in-out;
+}
+
+#fl-2:hover{
+    font-size: 60px;
+    color: rgb(230, 79, 42);
+    text-decoration: underline solid black;
+}
+
+
+
+#side-text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    color:rgb(78, 78, 78);
+    position:fixed;
+    margin-left: -220px;
+    margin-top: 380px;
+    
+    transform: rotateZ(270deg);
+    transition: all 1s ease-in-out;
+}
+
+#side-text:hover{
+   color: rgb(241, 62, 62);
+}
+
+
+#hero-container{
+    background-color: rgba(36, 36, 36, 0.432);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 7px 7px 0px 0px;
+
+}
+
+#hero-img-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+
+#hero-img-container>img{
+    min-width: 300px;
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#hero-desc{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width:auto;
+}
+
+
+#hero-desc>h1{
+    justify-self:left;
+    margin-left: 20px;
+    font-size: xxx-large;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-right: 20px;
+}
+
+#hero-description{
+    display: block;
+    color: white;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+
+#more-detail-container{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    background-color: rgb(34, 34, 34);
+    border: 2px solid red;
+    margin-top: 10px;
+    border-radius: 10px;
+    height:70%;
+    color: azure;
+}
+
+.more-detail{
+    margin-top: 20px;
+}
+
+#comic-container{
+    width: 20%;
+    height: 90%;
+    border: 2px solid black;
+}
+
+#event-container{
+    width: 20%;
+    height: 90%;
+    border: 2px solid black;
+}
+
+#series-container{
+    width: 20%;
+    height: 90%;  
+    border: 2px solid black;
+}
+
+#stories-container{
+    width: 20%;
+    height: 90%;
+    border: 2px solid black;
+}
+
+
+
+
+.more-detail h2{
+    margin-left: 5px;
+    border-bottom: 2px solid red;
+}
+
+  .details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    /* border: 2px solid blue; */
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+
+  .details-sub{
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+
+  .list-container{
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    margin-top: 5px;
+    padding-top: 5px;
+    /* border: 2px solid green; */
+    overflow-y: scroll;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 63);
+  }
+
+
+  .list-container::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+
+  }
+
+
+  .list-container::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+  }
+
+ .list-container::-webkit-scrollbar-thumb {
+    background-color: rgb(204, 80, 80);
+    /* outline: 1px solid slategrey; */
+    border-radius: 10px;
+  }
+
+  .lists > li{
+    color:rgb(3, 3, 3);
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left: 25px;
+    list-style: decimal;
+  }
+
+
+  #about-container{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    border: 2px solid black;
+  }
+
+  #logo{
+    margin-left: 20px;
+    border-radius: 10px;
+    background-image: url("./Marvel.png");
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+  }
