@@ -28,7 +28,7 @@ async function fetchHeroes()
         for(let i=0; i<=15; i++)
         {
             
-            let response = await fetch(`http://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}&ts=${ts}&apikey=${api_key}&hash=${hash}`);
+            let response = await fetch(`https://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}&ts=${ts}&apikey=${api_key}&hash=${hash}`);
             
             let out = await response.json();
             console.log("Total data : ", out.data.total);
@@ -40,7 +40,7 @@ async function fetchHeroes()
 
         }
         console.log("Name : ",harray);
-        console.log(`http://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}&ts=${ts}&apikey=${api_key}&hash=${hash}`);
+        console.log(`https://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}&ts=${ts}&apikey=${api_key}&hash=${hash}`);
         
         //Adding like property to individual hero object
         for(let i=0; i<harray.length; i++)
